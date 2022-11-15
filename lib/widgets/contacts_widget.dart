@@ -22,7 +22,7 @@ class ContactsWidget extends StatelessWidget {
             TextButton(
               onPressed: () async {
                 await Launcher.launch(
-                    Uri.parse('https://github.com/Thebubeev/burlang_mobile'));
+                    Uri.parse('https://github.com/burlang/mobile'));
               },
               child: const Text(
                 'GitHub',

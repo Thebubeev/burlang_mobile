@@ -48,7 +48,7 @@ class _BuryatAlphabetsScreenState extends State<BuryatAlphabetsScreen> {
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 120,
                   childAspectRatio: 3 / 2,
-                  crossAxisSpacing: 20,
+                  crossAxisSpacing: 10,
                   mainAxisSpacing: 20),
               itemCount: Constants.letters_names.length,
               itemBuilder: (BuildContext ctx, index) {

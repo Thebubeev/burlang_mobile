@@ -105,8 +105,10 @@ class _SearchDictionaryWordWidgetState
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text(isBur ? Constants.bur : Constants.rus,
-                              style: Constants.textSearchFormWordStyle),
+                          Expanded(
+                            child: Text(isBur ? Constants.bur : Constants.rus,
+                                style: Constants.textSearchFormWordStyle),
+                          ),
                           IconButton(
                             onPressed: () {
                               setState(() {
@@ -133,9 +135,11 @@ class _SearchDictionaryWordWidgetState
                               ),
                             ),
                           ),
-                          Text(
-                              '${isBur ? Constants.bur_rus : Constants.rus_bur}',
-                              style: Constants.textSearchFormWordStyle),
+                          Expanded(
+                            child: Text(
+                                '${isBur ? Constants.bur_rus : Constants.rus_bur}',
+                                style: Constants.textSearchFormWordStyle),
+                          ),
                         ]),
                   ),
                   Padding(
