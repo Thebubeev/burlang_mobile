@@ -105,10 +105,8 @@ class _SearchDictionaryWordWidgetState
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Expanded(
-                            child: Text(isBur ? Constants.bur : Constants.rus,
-                                style: Constants.textSearchFormWordStyle),
-                          ),
+                          Text(isBur ? Constants.bur : Constants.rus,
+                              style: Constants.textSearchFormWordStyle),
                           IconButton(
                             onPressed: () {
                               setState(() {

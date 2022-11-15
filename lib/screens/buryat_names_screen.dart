@@ -1,3 +1,4 @@
+import 'package:burlang_demo/api/burlang_api.dart';
 import 'package:burlang_demo/bloc/burlang_bloc.dart';
 import 'package:burlang_demo/config/router.dart';
 import 'package:burlang_demo/constants/constants.dart';
@@ -37,16 +38,6 @@ class _BuryatNamesScreenState extends State<BuryatNamesScreen> {
   Widget build(BuildContext context) {
     return BlocListener<BurlangBloc, BurlangState>(
       listener: (context, state) {
-        if (state is BurlangDataSearchedNamesState) {
-          if (!mounted) return;
-          setState(() {
-            isLoading = false;
-            isError = false;
-            query = state.query;
-            names = state.searchedNames;
-          });
-        }
-
         if (state is BurlangInitializedNamesState) {
           if (!mounted) return;
           setState(() {
@@ -155,12 +146,11 @@ class _BuryatNamesScreenState extends State<BuryatNamesScreen> {
     );
   }
 
-  searchName(String query) {
+  searchName(String query) async {
+    final searchedNames = await BurlangApi().getAllNames(widget.letter, query);
     setState(() {
-      isLoading = true;
+      names = searchedNames;
     });
-    BlocProvider.of<BurlangBloc>(context)
-        .add(BurlangSearchName(letter: widget.letter, query: query));
   }
 
   void init() {
