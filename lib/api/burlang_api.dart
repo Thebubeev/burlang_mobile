@@ -11,7 +11,7 @@ import 'package:http/http.dart' as http;
 class BurlangApi {
   Future<BuryatName> getName(String name) async {
     final response = await http.get(
-      Uri.parse("http://burlang.ru/api/v1/names/get-name?q=$name"),
+      Uri.parse("https://burlang.ru/api/v1/names/get-name?q=$name"),
       headers: <String, String>{
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
@@ -28,7 +28,7 @@ class BurlangApi {
 
   Future<List<BuryatNames>> getAllNames(String letter, String query) async {
     final response = await http.get(
-      Uri.parse('http://burlang.ru/api/v1/names'),
+      Uri.parse('https://burlang.ru/api/v1/names'),
       headers: <String, String>{
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
@@ -57,7 +57,7 @@ class BurlangApi {
 
   Future<Translations> getBuryatTranslation(String value) async {
     final response = await http.get(
-      Uri.parse('http://burlang.ru/api/v1/buryat-word/translate?q=$value'),
+      Uri.parse('https://burlang.ru/api/v1/buryat-word/translate?q=$value'),
       headers: <String, String>{
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
@@ -74,7 +74,7 @@ class BurlangApi {
 
   Future<List<SearchWords>> getBuryatWord(String value) async {
     final response = await http.get(
-      Uri.parse('http://burlang.ru/api/v1/buryat-word/search?q=$value'),
+      Uri.parse('https://burlang.ru/api/v1/buryat-word/search?q=$value'),
       headers: <String, String>{
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
@@ -97,7 +97,7 @@ class BurlangApi {
 
   Future<Translations> getRussianTranslation(String value) async {
     final response = await http.get(
-      Uri.parse('http://burlang.ru/api/v1/russian-word/translate?q=$value'),
+      Uri.parse('https://burlang.ru/api/v1/russian-word/translate?q=$value'),
       headers: <String, String>{
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
@@ -114,7 +114,7 @@ class BurlangApi {
 
   Future<List<SearchWords>> getRussianWord(String value) async {
     final response = await http.get(
-      Uri.parse('http://burlang.ru/api/v1/russian-word/search?q=$value'),
+      Uri.parse('https://burlang.ru/api/v1/russian-word/search?q=$value'),
       headers: <String, String>{
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
@@ -141,7 +141,7 @@ class BurlangApi {
 
   Future<List<News>> getNews() async {
     final response = await http.get(
-      Uri.parse('http://burlang.ru/api/v1/news?page=1'),
+      Uri.parse('https://burlang.ru/api/v1/news?page=1'),
       headers: <String, String>{
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
@@ -160,7 +160,7 @@ class BurlangApi {
 
   Future<New> getNew(String slug) async {
     final response = await http.get(
-      Uri.parse('http://burlang.ru/api/v1/news/get-news?q=$slug'),
+      Uri.parse('https://burlang.ru/api/v1/news/get-news?q=$slug'),
       headers: <String, String>{
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',

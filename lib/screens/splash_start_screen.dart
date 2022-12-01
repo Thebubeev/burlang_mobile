@@ -1,4 +1,5 @@
 import 'package:burlang_demo/config/router.dart';
+import 'package:burlang_demo/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class SplashStartScreen extends StatefulWidget {
@@ -35,31 +36,19 @@ class _SplashStartScreenState extends State<SplashStartScreen> {
           Text('Burlang',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 80,
+                  fontSize: 70,
                   color: Colors.white)),
           Text(
             'Русско-Бурятский,',
-            style: TextStyle(
-                fontFamily: 'Arial',
-                fontWeight: FontWeight.w600,
-                fontSize: 26,
-                color: Colors.white),
+            style: Constants.textSplashStyle
           ),
           Text(
             'Бурятско-Русский',
-            style: TextStyle(
-                fontFamily: 'Arial',
-                fontWeight: FontWeight.w600,
-                fontSize: 26,
-                color: Colors.white),
+            style: Constants.textSplashStyle
           ),
           Text(
             'электронный словарь',
-            style: TextStyle(
-                fontFamily: 'Arial',
-                fontWeight: FontWeight.w600,
-                fontSize: 26,
-                color: Colors.white),
+            style: Constants.textSplashStyle
           )
         ],
       )),
