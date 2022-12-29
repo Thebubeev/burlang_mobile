@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [BlocProvider<BurlangBloc>(create: (_) => BurlangBloc())],
       child: const MaterialApp(
+          title: 'Burlang',
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
           onGenerateRoute: RouteGenerator.generateRoute,
           home: SplashStartScreen()),
     );
