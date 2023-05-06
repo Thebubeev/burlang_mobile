@@ -12,6 +12,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: Constants.color,
       elevation: 0.0,
+      centerTitle: true,
       title: GestureDetector(
         onTap: () {
           Navigator.of(context).pushNamed(RouteGenerator.MAIN);
